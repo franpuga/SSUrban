@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SSUrbanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="Nombre" Type="nvarchar" MaxLength="200" />
+    <Property Name="Apellidos" Type="nvarchar" MaxLength="300" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="500" />
+    <Property Name="DNI" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+    <Property Name="Email" Type="nvarchar" MaxLength="200" />
+    <Property Name="Observaciones" Type="nvarchar" MaxLength="2500" />
+  </EntityType>
+  <EntityType Name="Inmuebles">
+    <Key>
+      <PropertyRef Name="Expediente" />
+    </Key>
+    <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Expediente" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Localidad" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="250" />
+    <Property Name="Direccion" Type="nvarchar" MaxLength="500" />
+    <Property Name="Vendedor_Arrendador" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Comprador_Arrendatario" Type="nvarchar" MaxLength="10" />
+    <Property Name="TipoInmueble" Type="int" Nullable="false" />
+    <Property Name="EstateCounter" Type="bigint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Municipios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="nvarchar" MaxLength="150" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoInmuebles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Counter" Type="bigint" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Inmuebles_Clientes_Comprador">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="Comprador_Arrendatario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inmuebles_Clientes_Vendedor">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="Vendedor_Arrendador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inmuebles_TipoInmuebles">
+    <End Role="TipoInmuebles" Type="Self.TipoInmuebles" Multiplicity="1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoInmuebles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="TipoInmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SSUrbanModelStoreContainer">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Inmuebles" EntityType="Self.Inmuebles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Municipios" EntityType="Self.Municipios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoInmuebles" EntityType="Self.TipoInmuebles" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Inmuebles_Clientes_Comprador" Association="Self.FK_Inmuebles_Clientes_Comprador">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inmuebles_Clientes_Vendedor" Association="Self.FK_Inmuebles_Clientes_Vendedor">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inmuebles_TipoInmuebles" Association="Self.FK_Inmuebles_TipoInmuebles">
+      <End Role="TipoInmuebles" EntitySet="TipoInmuebles" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,16 @@
+2018-03-23 22:16:34,321 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:19:39,871 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:19:59,256 [10] ERROR <>f__AnonymousType0`2 [(null)] - Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+System.Data.Entity.Validation.DbEntityValidationException: Validation failed for one or more entities. See 'EntityValidationErrors' property for more details.
+   en System.Data.Entity.Internal.InternalContext.SaveChanges()
+   en System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   en System.Data.Entity.DbContext.SaveChanges()
+   en SSUrban.MainForm.btnSaveCustomer_Click(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 91
+2018-03-23 22:27:26,193 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:27:36,402 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:30:01,434 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:30:59,759 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:31:24,464 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:32:53,264 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:34:45,656 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-23 22:35:10,437 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.

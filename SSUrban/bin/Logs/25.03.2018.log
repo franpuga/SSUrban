@@ -1,0 +1,274 @@
+2018-03-25 16:10:59,886 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:17:25,198 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:18:32,820 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:20:11,449 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:20:40,270 [9] INFO  <>f__AnonymousType0`2 [(null)] - No hay conexión con el servidor de base de datos.
+2018-03-25 16:35:17,969 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:35:35,046 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:35:39,824 [9] ERROR <>f__AnonymousType0`2 [(null)] - The underlying provider failed on Open.
+System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 133
+2018-03-25 16:35:39,961 [9] ERROR <>f__AnonymousType0`2 [(null)] - No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+System.InvalidOperationException: No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 119
+2018-03-25 16:36:05,672 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:36:22,465 [1] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:36:24,740 [1] ERROR <>f__AnonymousType0`2 [(null)] - The underlying provider failed on Open.
+System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 133
+2018-03-25 16:36:24,821 [1] ERROR <>f__AnonymousType0`2 [(null)] - No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+System.InvalidOperationException: No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 111
+2018-03-25 16:36:51,230 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:37:26,937 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:37:43,673 [1] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:38:00,070 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:39:59,569 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:40:21,104 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:40:38,845 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:41:07,603 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:41:25,610 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:44:52,831 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:45:13,062 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:45:16,238 [9] ERROR <>f__AnonymousType0`2 [(null)] - The underlying provider failed on Open.
+System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 129
+2018-03-25 16:45:16,327 [9] ERROR <>f__AnonymousType0`2 [(null)] - No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+System.InvalidOperationException: No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 115
+2018-03-25 16:46:21,391 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:46:39,040 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:46:41,291 [9] ERROR <>f__AnonymousType0`2 [(null)] - The underlying provider failed on Open.
+System.Data.Entity.Core.EntityException: The underlying provider failed on Open. ---> System.Data.SqlClient.SqlException: Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, UInt32 waitForMultipleObjectsTimeout, Boolean allowCreate, Boolean onlyOneCheckConnection, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionPool.TryGetConnection(DbConnection owningObject, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionFactory.TryGetConnection(DbConnection owningConnection, TaskCompletionSource`1 retry, DbConnectionOptions userOptions, DbConnectionInternal oldConnection, DbConnectionInternal& connection)
+   en System.Data.ProviderBase.DbConnectionInternal.TryOpenConnectionInternal(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.ProviderBase.DbConnectionClosed.TryOpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory, TaskCompletionSource`1 retry, DbConnectionOptions userOptions)
+   en System.Data.SqlClient.SqlConnection.TryOpenInner(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.TryOpen(TaskCompletionSource`1 retry)
+   en System.Data.SqlClient.SqlConnection.Open()
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.<Open>b__36(DbConnection t, DbConnectionInterceptionContext c)
+   en System.Data.Entity.Infrastructure.Interception.InternalDispatcher`1.Dispatch[TTarget,TInterceptionContext](TTarget target, Action`2 operation, TInterceptionContext interceptionContext, Action`3 executing, Action`3 executed)
+   en System.Data.Entity.Infrastructure.Interception.DbConnectionDispatcher.Open(DbConnection connection, DbInterceptionContext interceptionContext)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.<Open>b__2()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.<>c__DisplayClass1.<Execute>b__0()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute(Action operation)
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   --- Fin del seguimiento de la pila de la excepción interna ---
+   en System.Data.Entity.Core.EntityClient.EntityConnection.Open()
+   en System.Data.Entity.Core.Objects.ObjectContext.EnsureConnection(Boolean shouldMonitorTransactions)
+   en System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   en System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   en System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   en System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   en System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   en System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 129
+2018-03-25 16:46:41,378 [9] ERROR <>f__AnonymousType0`2 [(null)] - No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+System.InvalidOperationException: No se puede llamar a Invoke o a BeginInvoke en un control hasta que se haya creado el identificador de ventana.
+   en System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous)
+   en System.Windows.Forms.Control.Invoke(Delegate method, Object[] args)
+   en System.Windows.Forms.Control.Invoke(Delegate method)
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 115
+2018-03-25 16:47:44,782 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:48:02,771 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:54:16,100 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:54:34,902 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 16:54:48,058 [11] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:54:57,324 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 16:55:18,771 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:10:24,501 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:10:42,809 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 17:18:03,201 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:34:11,661 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:34:28,735 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 17:35:43,326 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:36:02,153 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:36:19,214 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 17:40:03,756 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:40:22,527 [9] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 17:40:46,169 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:41:03,825 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 17:43:46,348 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:44:39,308 [6] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:52:52,185 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:53:44,068 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:54:20,885 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:54:41,657 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 17:55:19,189 [10] ERROR <>f__AnonymousType0`2 [(null)] - Error relacionado con la red o específico de la instancia mientras se establecía una conexión con el servidor SQL Server. No se encontró el servidor o éste no estaba accesible. Compruebe que el nombre de la instancia es correcto y que SQL Server está configurado para admitir conexiones remotas. (provider: SQL Network Interfaces, error: 26 - Error al buscar el servidor o instancia especificado)
+2018-03-25 18:01:04,329 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:03:00,359 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:06:21,645 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:15:32,295 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:23:09,347 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:24:28,001 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:31:43,664 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:32:49,228 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:34:23,339 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:37:06,441 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:41:58,220 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:56:51,824 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 18:57:49,139 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:00:43,800 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:05:13,557 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:06:48,757 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:10:52,999 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:17:48,250 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:19:57,222 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:21:14,727 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:22:49,404 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:38:32,574 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:39:48,405 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 19:55:37,650 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:04:26,151 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:18:34,679 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:18:37,051 [9] ERROR <>f__AnonymousType0`2 [(null)] - Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en SSUrban.SplashForm.set_LabelInfo(String value) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\SplashForm.cs:línea 23
+   en SSUrban.MainForm.VerifyDatabaseConnectivity() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 274
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 72
+2018-03-25 20:19:03,603 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:21:36,953 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:21:46,725 [9] ERROR <>f__AnonymousType0`2 [(null)] - Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en SSUrban.SplashForm.set_LabelInfo(String value) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\SplashForm.cs:línea 23
+   en SSUrban.MainForm.VerifyDatabaseConnectivity() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 274
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 72
+2018-03-25 20:22:31,166 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:26:44,121 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:26:54,739 [9] ERROR <>f__AnonymousType0`2 [(null)] - Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+System.InvalidOperationException: Operación no válida a través de subprocesos: Se tuvo acceso al control 'lblLoadInfo' desde un subproceso distinto a aquel en que lo creó.
+   en System.Windows.Forms.Control.get_Handle()
+   en System.Windows.Forms.Control.set_WindowText(String value)
+   en System.Windows.Forms.Control.set_Text(String value)
+   en System.Windows.Forms.Label.set_Text(String value)
+   en SSUrban.SplashForm.set_LabelInfo(String value) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\SplashForm.cs:línea 23
+   en SSUrban.MainForm.VerifyDatabaseConnectivity() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 274
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 72
+2018-03-25 20:28:51,199 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:30:04,390 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:42:19,738 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:43:42,096 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:44:48,020 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:45:30,760 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:47:53,269 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:48:04,765 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:48:42,643 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:48:57,369 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:49:37,229 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:49:47,062 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:51:31,782 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:51:42,826 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:52:32,235 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:53:38,430 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:55:03,770 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:56:28,712 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:58:06,966 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 20:58:49,681 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 21:01:21,917 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 21:02:14,273 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 21:05:09,001 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 21:09:17,288 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 21:10:50,013 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-25 22:03:54,334 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.

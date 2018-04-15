@@ -1,0 +1,1 @@
+2018-03-23 20:53:04,273 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.

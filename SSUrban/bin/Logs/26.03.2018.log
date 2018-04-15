@@ -1,0 +1,59 @@
+2018-03-26 19:37:20,474 [1] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:46:24,140 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:50:01,189 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:50:40,673 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:50:58,612 [10] ERROR <>f__AnonymousType0`2 [(null)] - No se permite el valor Null.
+System.Data.NoNullAllowedException: No se permite el valor Null.
+   en SSUrban.EstateForm.PopulateControls(String expediente, Int32 estateType) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 112
+2018-03-26 19:51:44,792 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:51:56,755 [8] ERROR <>f__AnonymousType0`2 [(null)] - No se permite el valor Null.
+System.Data.NoNullAllowedException: No se permite el valor Null.
+   en SSUrban.EstateForm.PopulateControls(String expediente, Int32 estateType) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 112
+2018-03-26 19:52:34,355 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:52:45,985 [10] ERROR <>f__AnonymousType0`2 [(null)] - No se permite el valor Null.
+System.Data.NoNullAllowedException: No se permite el valor Null.
+   en SSUrban.EstateForm.PopulateControls(String expediente, Int32 estateType) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 112
+2018-03-26 19:54:38,399 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:54:48,290 [9] ERROR <>f__AnonymousType0`2 [(null)] - No se permite el valor Null.
+System.Data.NoNullAllowedException: No se permite el valor Null.
+   en SSUrban.EstateForm.PopulateControls(String expediente, Int32 estateType) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 112
+2018-03-26 19:55:34,852 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:56:18,523 [9] ERROR <>f__AnonymousType0`2 [(null)] - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en SSUrban.EstateForm.btnSaveEstate_Click(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 221
+2018-03-26 19:57:22,696 [8] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 19:57:54,053 [8] ERROR <>f__AnonymousType0`2 [(null)] - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en SSUrban.EstateForm.btnSaveEstate_Click(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 221
+2018-03-26 19:59:19,165 [8] ERROR <>f__AnonymousType0`2 [(null)] - El valor no puede ser nulo.
+Nombre del parámetro: entity
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: entity
+   en System.Data.Entity.Utilities.Check.NotNull[T](T value, String parameterName)
+   en System.Data.Entity.DbSet`1.Remove(TEntity entity)
+   en SSUrban.EstateForm.btnDeleteEstate_Click(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\EstateForm.cs:línea 318
+2018-03-26 20:00:44,253 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:01:24,032 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:01:34,106 [9] ERROR <>f__AnonymousType0`2 [(null)] - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 99
+2018-03-26 20:02:16,141 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:02:40,448 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:02:48,236 [10] ERROR <>f__AnonymousType0`2 [(null)] - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 99
+2018-03-26 20:02:53,259 [10] ERROR <>f__AnonymousType0`2 [(null)] - Referencia a objeto no establecida como instancia de un objeto.
+System.NullReferenceException: Referencia a objeto no establecida como instancia de un objeto.
+   en SSUrban.MainForm.LoadData() en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 164
+   en SSUrban.MainForm.MainForm_Load(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 80
+2018-03-26 20:03:22,657 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:04:13,602 [10] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:04:49,696 [10] ERROR <>f__AnonymousType0`2 [(null)] - No se permite el valor Null.
+System.Data.NoNullAllowedException: No se permite el valor Null.
+   en SSUrban.MainForm.clientsList_SelectedIndexChanged(Object sender, EventArgs e)
+2018-03-26 20:08:55,481 [9] INFO  <>f__AnonymousType0`2 [(null)] - Inicio de la app de gestión S&S Urban.
+2018-03-26 20:10:07,614 [9] ERROR <>f__AnonymousType0`2 [(null)] - El valor no puede ser nulo.
+Nombre del parámetro: entity
+System.ArgumentNullException: El valor no puede ser nulo.
+Nombre del parámetro: entity
+   en SSUrban.MainForm.btnDelete_Click(Object sender, EventArgs e) en C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\MainForm.cs:línea 446

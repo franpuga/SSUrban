@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SSUrbanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="DNI" />
+          </Key>
+          <Property Name="Nombre" Type="nvarchar" MaxLength="200" />
+          <Property Name="Apellidos" Type="nvarchar" MaxLength="300" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="500" />
+          <Property Name="DNI" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Telefono" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="200" />
+          <Property Name="Observaciones" Type="nvarchar" MaxLength="2500" />
+        </EntityType>
+        <EntityType Name="Inmuebles">
+          <Key>
+            <PropertyRef Name="Expediente" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Expediente" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Localidad" Type="nvarchar" MaxLength="50" />
+          <Property Name="Descripcion" Type="nvarchar" MaxLength="250" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="500" />
+          <Property Name="Vendedor_Arrendador" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="Comprador_Arrendatario" Type="nvarchar" MaxLength="10" />
+          <Property Name="TipoInmueble" Type="int" Nullable="false" />
+          <Property Name="EstateCounter" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Municipios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Nombre" Type="nvarchar" MaxLength="150" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoInmuebles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Counter" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Inmuebles_Clientes_Comprador">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+          <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="Comprador_Arrendatario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inmuebles_Clientes_Vendedor">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+          <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="Vendedor_Arrendador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inmuebles_TipoInmuebles">
+          <End Role="TipoInmuebles" Type="Self.TipoInmuebles" Multiplicity="1" />
+          <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoInmuebles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="TipoInmueble" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="SSUrbanModelStoreContainer">
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Inmuebles" EntityType="Self.Inmuebles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Municipios" EntityType="Self.Municipios" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoInmuebles" EntityType="Self.TipoInmuebles" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Inmuebles_Clientes_Comprador" Association="Self.FK_Inmuebles_Clientes_Comprador">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inmuebles_Clientes_Vendedor" Association="Self.FK_Inmuebles_Clientes_Vendedor">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inmuebles_TipoInmuebles" Association="Self.FK_Inmuebles_TipoInmuebles">
+            <End Role="TipoInmuebles" EntitySet="TipoInmuebles" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SSUrbanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="DNI" />
+          </Key>
+          <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Apellidos" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Observaciones" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Inmuebles" Relationship="SSUrbanModel.FK_Inmuebles_Clientes_Comprador" FromRole="Clientes" ToRole="Inmuebles" />
+          <NavigationProperty Name="Inmuebles1" Relationship="SSUrbanModel.FK_Inmuebles_Clientes_Vendedor" FromRole="Clientes" ToRole="Inmuebles" />
+        </EntityType>
+        <EntityContainer Name="SSUrbanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+          <EntitySet Name="Inmuebles" EntityType="SSUrbanModel.Inmuebles" />
+          <EntitySet Name="TipoInmuebles" EntityType="SSUrbanModel.TipoInmuebles" />
+          <AssociationSet Name="FK_Inmuebles_Clientes_Comprador" Association="SSUrbanModel.FK_Inmuebles_Clientes_Comprador">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inmuebles_Clientes_Vendedor" Association="SSUrbanModel.FK_Inmuebles_Clientes_Vendedor">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Inmuebles_TipoInmuebles" Association="SSUrbanModel.FK_Inmuebles_TipoInmuebles">
+            <End Role="TipoInmuebles" EntitySet="TipoInmuebles" />
+            <End Role="Inmuebles" EntitySet="Inmuebles" />
+          </AssociationSet>
+          <EntitySet Name="Municipios" EntityType="SSUrbanModel.Municipios" />
+        </EntityContainer>
+        <EntityType Name="Inmuebles">
+          <Key>
+            <PropertyRef Name="Expediente" />
+          </Key>
+          <Property Name="Expediente" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="false" />
+          <Property Name="Fecha" Type="DateTime" Precision="3" />
+          <Property Name="Localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Vendedor_Arrendador" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Comprador_Arrendatario" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="TipoInmueble" Type="Int32" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Clientes" Relationship="SSUrbanModel.FK_Inmuebles_Clientes_Comprador" FromRole="Inmuebles" ToRole="Clientes" />
+          <NavigationProperty Name="Clientes1" Relationship="SSUrbanModel.FK_Inmuebles_Clientes_Vendedor" FromRole="Inmuebles" ToRole="Clientes" />
+          <NavigationProperty Name="TipoInmuebles" Relationship="SSUrbanModel.FK_Inmuebles_TipoInmuebles" FromRole="Inmuebles" ToRole="TipoInmuebles" />
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="EstateCounter" Type="Int64" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoInmuebles">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Inmuebles" Relationship="SSUrbanModel.FK_Inmuebles_TipoInmuebles" FromRole="TipoInmuebles" ToRole="Inmuebles" />
+          <Property Name="Counter" Type="Int64" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Inmuebles_Clientes_Comprador">
+          <End Type="SSUrbanModel.Clientes" Role="Clientes" Multiplicity="0..1" />
+          <End Type="SSUrbanModel.Inmuebles" Role="Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="Comprador_Arrendatario" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inmuebles_Clientes_Vendedor">
+          <End Type="SSUrbanModel.Clientes" Role="Clientes" Multiplicity="1" />
+          <End Type="SSUrbanModel.Inmuebles" Role="Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="DNI" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="Vendedor_Arrendador" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Inmuebles_TipoInmuebles">
+          <End Type="SSUrbanModel.TipoInmuebles" Role="TipoInmuebles" Multiplicity="1" />
+          <End Type="SSUrbanModel.Inmuebles" Role="Inmuebles" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoInmuebles">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Inmuebles">
+              <PropertyRef Name="TipoInmueble" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="Municipios">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SSUrbanModelStoreContainer" CdmEntityContainer="SSUrbanEntities">
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="SSUrbanModel.Clientes">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Apellidos" ColumnName="Apellidos" />
+                <ScalarProperty Name="DNI" ColumnName="DNI" />
+                <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Observaciones" ColumnName="Observaciones" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Inmuebles">
+            <EntityTypeMapping TypeName="SSUrbanModel.Inmuebles">
+              <MappingFragment StoreEntitySet="Inmuebles">
+                <ScalarProperty Name="EstateCounter" ColumnName="EstateCounter" />
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="TipoInmueble" ColumnName="TipoInmueble" />
+                <ScalarProperty Name="Comprador_Arrendatario" ColumnName="Comprador_Arrendatario" />
+                <ScalarProperty Name="Vendedor_Arrendador" ColumnName="Vendedor_Arrendador" />
+                <ScalarProperty Name="Localidad" ColumnName="Localidad" />
+                <ScalarProperty Name="Fecha" ColumnName="Fecha" />
+                <ScalarProperty Name="Expediente" ColumnName="Expediente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoInmuebles">
+            <EntityTypeMapping TypeName="SSUrbanModel.TipoInmuebles">
+              <MappingFragment StoreEntitySet="TipoInmuebles">
+                <ScalarProperty Name="Counter" ColumnName="Counter" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Municipios">
+            <EntityTypeMapping TypeName="SSUrbanModel.Municipios">
+              <MappingFragment StoreEntitySet="Municipios">
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
