@@ -18,3 +18,6 @@ C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\obj\Debug\SS
 C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\obj\Debug\SSUrban.exe
 C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\obj\Debug\SSUrban.pdb
 C:\Users\FRAN\documents\visual studio 2015\Projects\ssurban\SSUrban\obj\Debug\SSUrban.csprojResolveAssemblyReference.cache
+C:\projects\SSUrban\SSUrban\bin\Debug\SSUrban.exe.config
+C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.exe
+C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.pdb
