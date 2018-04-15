@@ -43,6 +43,7 @@ namespace SSUrban
             // Matriz de procesos
             Process[] processes = Process.GetProcesses();
 
+            //Si es el mismo proceso con diferente id no permitimos arrancar
             return processes.Where(p => p.Id != currentProcess.Id && 
                                    p.ProcessName == currentProcess.ProcessName).Any();
         }
