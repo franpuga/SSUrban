@@ -214,6 +214,7 @@ namespace SSUrban
                             transaction = panelTransaction.Controls.OfType<RadioButton>().SingleOrDefault(rad => rad.Checked == true).Text;
                             estate.TipoInmueble = ctx.TipoInmuebles.Where(x => x.Description == transaction).FirstOrDefault().Id;
                             estate.Vendedor_Arrendador = txtDniOwner.Text;
+                            estate.Comprador_Arrendatario = txtDniBuyer.Text;
                             ctx.Entry(estate).CurrentValues.SetValues(estate);
                         }
                         else
@@ -227,6 +228,7 @@ namespace SSUrban
                             transaction = panelTransaction.Controls.OfType<RadioButton>().SingleOrDefault(rad => rad.Checked == true).Text;
                             estate.TipoInmueble = ctx.TipoInmuebles.Where(x => x.Description == transaction).FirstOrDefault().Id;
                             estate.Vendedor_Arrendador = txtDniOwner.Text;
+                            estate.Comprador_Arrendatario = txtDniBuyer.Text;
                             estate.EstateCounter = ++(ctx.TipoInmuebles.Where(i => i.Id == estate.TipoInmueble).FirstOrDefault().Counter);
 
                             ctx.Inmuebles.Add(estate);

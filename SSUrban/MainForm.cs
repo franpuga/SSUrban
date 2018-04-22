@@ -223,7 +223,8 @@ namespace SSUrban
             {
                 _ctx = new SSUrbanEntities();
                 var estates = (from i in _ctx.Inmuebles
-                               where i.Vendedor_Arrendador == dni
+                               where i.Vendedor_Arrendador == dni ||
+                               i.Comprador_Arrendatario == dni
                                select i).ToList();
 
                 estatesListView.Items.Clear();

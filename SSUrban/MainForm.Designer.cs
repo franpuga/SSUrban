@@ -115,7 +115,7 @@ namespace SSUrban
             this.metroTabControl.Controls.Add(this.metroTabAlquilerOpcionCompra);
             this.metroTabControl.Location = new System.Drawing.Point(24, 63);
             this.metroTabControl.Name = "metroTabControl";
-            this.metroTabControl.SelectedIndex = 0;
+            this.metroTabControl.SelectedIndex = 3;
             this.metroTabControl.Size = new System.Drawing.Size(1096, 573);
             this.metroTabControl.TabIndex = 0;
             this.metroTabControl.UseSelectable = true;
@@ -200,7 +200,7 @@ namespace SSUrban
             // columnDate
             // 
             this.columnDate.Text = "Fecha";
-            this.columnDate.Width = 100;
+            this.columnDate.Width = 110;
             // 
             // lblClientes
             // 
@@ -683,7 +683,7 @@ namespace SSUrban
             // headerFecha
             // 
             this.headerFecha.Text = "Fecha";
-            this.headerFecha.Width = 100;
+            this.headerFecha.Width = 110;
             // 
             // txtSearchEstateSale
             // 
@@ -790,7 +790,7 @@ namespace SSUrban
             // columnHeader5
             // 
             this.columnHeader5.Text = "Fecha";
-            this.columnHeader5.Width = 100;
+            this.columnHeader5.Width = 110;
             // 
             // txtSearchEstateRent
             // 
@@ -895,7 +895,7 @@ namespace SSUrban
             // columnHeader10
             // 
             this.columnHeader10.Text = "Fecha";
-            this.columnHeader10.Width = 100;
+            this.columnHeader10.Width = 110;
             // 
             // txtSearchEstateSaleOption
             // 
