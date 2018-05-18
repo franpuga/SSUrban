@@ -52,12 +52,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-      <Private>True</Private>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
@@ -89,33 +85,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Clientes.cs">
-      <DependentUpon>SSUrbanEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Inmuebles.cs">
-      <DependentUpon>SSUrbanEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\Municipios.cs">
-      <DependentUpon>SSUrbanEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\SSUrbanEntities.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SSUrbanEntities.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\SSUrbanEntities.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SSUrbanEntities.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Data\SSUrbanEntities.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SSUrbanEntities.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Data\TipoInmuebles.cs">
-      <DependentUpon>SSUrbanEntities.tt</DependentUpon>
-    </Compile>
     <Compile Include="EstateForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,13 +120,6 @@
     <EmbeddedResource Include="SplashForm.resx">
       <DependentUpon>SplashForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EntityDeploy Include="Data\SSUrbanEntities.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SSUrbanEntities.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <None Include="Data\SSUrbanEntities.edmx.diagram">
-      <DependentUpon>SSUrbanEntities.edmx</DependentUpon>
-    </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\SSUrban.Data.Inmuebles.datasource" />
     <None Include="Properties\DataSources\SSUrban.Data.Municipios.datasource" />
@@ -182,16 +144,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Data\SSUrbanEntities.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SSUrbanEntities.edmx</DependentUpon>
-      <LastGenOutput>SSUrbanEntities.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Data\SSUrbanEntities.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SSUrbanEntities.edmx</DependentUpon>
-      <LastGenOutput>SSUrbanEntities.cs</LastGenOutput>
-    </Content>
     <Content Include="favicon.ico" />
     <None Include="Resources\S&amp;S - marca vertital.png" />
     <None Include="Resources\ssurban_horizontal.png" />
@@ -199,7 +151,12 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\SSUrbanModelo\SSUrbanModelo.csproj">
+      <Project>{4b85c9d7-2f29-4ef3-80e3-ccd3debc3709}</Project>
+      <Name>SSUrbanModelo</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
       <Visible>False</Visible>

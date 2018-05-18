@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SSUrbanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="DNI" />
+    </Key>
+    <Property Name="Nombre" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Apellidos" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="DNI" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Telefono" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Observaciones" Type="String" MaxLength="2500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Inmuebles" Relationship="Self.FK_Inmuebles_Clientes_Comprador" FromRole="Clientes" ToRole="Inmuebles" />
+    <NavigationProperty Name="Inmuebles1" Relationship="Self.FK_Inmuebles_Clientes_Vendedor" FromRole="Clientes" ToRole="Inmuebles" />
+  </EntityType>
+  <EntityType Name="Inmuebles">
+    <Key>
+      <PropertyRef Name="Expediente" />
+    </Key>
+    <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Expediente" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Fecha" Type="DateTime" Precision="3" />
+    <Property Name="Localidad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Descripcion" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="Direccion" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Vendedor_Arrendador" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Comprador_Arrendatario" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="TipoInmueble" Type="Int32" Nullable="false" />
+    <Property Name="EstateCounter" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Clientes" Relationship="Self.FK_Inmuebles_Clientes_Comprador" FromRole="Inmuebles" ToRole="Clientes" />
+    <NavigationProperty Name="Clientes1" Relationship="Self.FK_Inmuebles_Clientes_Vendedor" FromRole="Inmuebles" ToRole="Clientes" />
+    <NavigationProperty Name="TipoInmuebles" Relationship="Self.FK_Inmuebles_TipoInmuebles" FromRole="Inmuebles" ToRole="TipoInmuebles" />
+  </EntityType>
+  <EntityType Name="Municipios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Nombre" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoInmuebles">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Counter" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="Inmuebles" Relationship="Self.FK_Inmuebles_TipoInmuebles" FromRole="TipoInmuebles" ToRole="Inmuebles" />
+  </EntityType>
+  <Association Name="FK_Inmuebles_Clientes_Comprador">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="0..1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="Comprador_Arrendatario" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inmuebles_Clientes_Vendedor">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="DNI" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="Vendedor_Arrendador" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Inmuebles_TipoInmuebles">
+    <End Role="TipoInmuebles" Type="Self.TipoInmuebles" Multiplicity="1" />
+    <End Role="Inmuebles" Type="Self.Inmuebles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoInmuebles">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Inmuebles">
+        <PropertyRef Name="TipoInmueble" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SSUrbanEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" />
+    <EntitySet Name="Inmuebles" EntityType="Self.Inmuebles" />
+    <EntitySet Name="Municipios" EntityType="Self.Municipios" />
+    <EntitySet Name="TipoInmuebles" EntityType="Self.TipoInmuebles" />
+    <AssociationSet Name="FK_Inmuebles_Clientes_Comprador" Association="Self.FK_Inmuebles_Clientes_Comprador">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inmuebles_Clientes_Vendedor" Association="Self.FK_Inmuebles_Clientes_Vendedor">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Inmuebles_TipoInmuebles" Association="Self.FK_Inmuebles_TipoInmuebles">
+      <End Role="TipoInmuebles" EntitySet="TipoInmuebles" />
+      <End Role="Inmuebles" EntitySet="Inmuebles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

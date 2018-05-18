@@ -1,0 +1,8 @@
+C:\projects\SSUrban\SSUrbanModelo\obj\Release\SSUrbanModelo.csprojResolveAssemblyReference.cache
+C:\projects\SSUrban\SSUrbanModelo\bin\Release\SSUrbanModelo.dll.config
+C:\projects\SSUrban\SSUrbanModelo\bin\Release\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrbanModelo\bin\Release\SSUrbanModelo.pdb
+C:\projects\SSUrban\SSUrbanModelo\bin\Release\EntityFramework.dll
+C:\projects\SSUrban\SSUrbanModelo\bin\Release\EntityFramework.xml
+C:\projects\SSUrban\SSUrbanModelo\obj\Release\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrbanModelo\obj\Release\SSUrbanModelo.pdb

@@ -1,0 +1,7 @@
+C:\projects\SSUrban\SSUrbanModelo\bin\Debug\SSUrbanModelo.dll.config
+C:\projects\SSUrban\SSUrbanModelo\bin\Debug\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrbanModelo\bin\Debug\SSUrbanModelo.pdb
+C:\projects\SSUrban\SSUrbanModelo\bin\Debug\EntityFramework.dll
+C:\projects\SSUrban\SSUrbanModelo\bin\Debug\EntityFramework.xml
+C:\projects\SSUrban\SSUrbanModelo\obj\Debug\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrbanModelo\obj\Debug\SSUrbanModelo.pdb

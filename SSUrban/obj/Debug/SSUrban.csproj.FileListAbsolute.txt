@@ -24,13 +24,11 @@ C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.pdb
 C:\projects\SSUrban\SSUrban\bin\Debug\SSUrban.exe
 C:\projects\SSUrban\SSUrban\bin\Debug\SSUrban.pdb
 C:\projects\SSUrban\SSUrban\bin\Debug\EntityFramework.dll
-C:\projects\SSUrban\SSUrban\bin\Debug\EntityFramework.SqlServer.dll
 C:\projects\SSUrban\SSUrban\bin\Debug\log4net.dll
 C:\projects\SSUrban\SSUrban\bin\Debug\MetroFramework.Design.dll
 C:\projects\SSUrban\SSUrban\bin\Debug\MetroFramework.dll
 C:\projects\SSUrban\SSUrban\bin\Debug\MetroFramework.Fonts.dll
 C:\projects\SSUrban\SSUrban\bin\Debug\EntityFramework.xml
-C:\projects\SSUrban\SSUrban\bin\Debug\EntityFramework.SqlServer.xml
 C:\projects\SSUrban\SSUrban\bin\Debug\log4net.xml
 C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.csprojResolveAssemblyReference.cache
 C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.EstateForm.resources
@@ -38,3 +36,6 @@ C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.MainForm.resources
 C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.Properties.Resources.resources
 C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.SplashForm.resources
 C:\projects\SSUrban\SSUrban\obj\Debug\SSUrban.csproj.GenerateResource.Cache
+C:\projects\SSUrban\SSUrban\bin\Debug\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrban\bin\Debug\SSUrbanModelo.pdb
+C:\projects\SSUrban\SSUrban\bin\Debug\SSUrbanModelo.dll.config

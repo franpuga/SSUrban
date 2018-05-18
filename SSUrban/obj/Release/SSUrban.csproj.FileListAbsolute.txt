@@ -24,13 +24,11 @@ C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.pdb
 C:\projects\SSUrban\SSUrban\bin\Release\SSUrban.exe
 C:\projects\SSUrban\SSUrban\bin\Release\SSUrban.pdb
 C:\projects\SSUrban\SSUrban\bin\Release\EntityFramework.dll
-C:\projects\SSUrban\SSUrban\bin\Release\EntityFramework.SqlServer.dll
 C:\projects\SSUrban\SSUrban\bin\Release\log4net.dll
 C:\projects\SSUrban\SSUrban\bin\Release\MetroFramework.Design.dll
 C:\projects\SSUrban\SSUrban\bin\Release\MetroFramework.dll
 C:\projects\SSUrban\SSUrban\bin\Release\MetroFramework.Fonts.dll
 C:\projects\SSUrban\SSUrban\bin\Release\EntityFramework.xml
-C:\projects\SSUrban\SSUrban\bin\Release\EntityFramework.SqlServer.xml
 C:\projects\SSUrban\SSUrban\bin\Release\log4net.xml
 C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.csprojResolveAssemblyReference.cache
 C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.EstateForm.resources
@@ -38,3 +36,6 @@ C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.MainForm.resources
 C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.Properties.Resources.resources
 C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.SplashForm.resources
 C:\projects\SSUrban\SSUrban\obj\Release\SSUrban.csproj.GenerateResource.Cache
+C:\projects\SSUrban\SSUrban\bin\Release\SSUrbanModelo.dll
+C:\projects\SSUrban\SSUrban\bin\Release\SSUrbanModelo.pdb
+C:\projects\SSUrban\SSUrban\bin\Release\SSUrbanModelo.dll.config

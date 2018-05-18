@@ -9,7 +9,6 @@ using System.Threading;
 using System.Windows.Forms;
 using MetroFramework;
 using MetroFramework.Forms;
-using SSUrban.Data;
 using System.Data.SqlClient;
 using static System.Windows.Forms.ListViewItem;
 using log4net;
@@ -17,6 +16,7 @@ using System.Reflection;
 using System.Net.NetworkInformation;
 using System.Configuration;
 using System.Diagnostics;
+using SSUrbanModelo;
 
 namespace SSUrban
 {
@@ -454,6 +454,7 @@ namespace SSUrban
                     {
                         clientsView.EndUpdate();
                         estatesListView.EndUpdate();
+                        MetroMessageBox.Show(this, "Cliente y sus inmuebles eliminados correctamente.", "Notificación", MessageBoxButtons.OK, MessageBoxIcon.Question);
                     }
                 }
                 else
