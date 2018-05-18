@@ -94,7 +94,6 @@
             this.txtExpediente.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtExpediente.CustomButton.UseSelectable = true;
             this.txtExpediente.CustomButton.Visible = false;
-            this.txtExpediente.Enabled = false;
             this.txtExpediente.FontSize = MetroFramework.MetroTextBoxSize.Medium;
             this.txtExpediente.Lines = new string[0];
             this.txtExpediente.Location = new System.Drawing.Point(99, 25);
