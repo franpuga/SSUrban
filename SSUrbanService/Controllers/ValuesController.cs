@@ -21,7 +21,7 @@ namespace SSUrbanService.Controllers
         {
             SSUrbanEntities ctx = new SSUrbanEntities();
             var estates = ctx.Inmuebles.Where(i => i.Expediente == expediente).ToList();
-            ctx.Configuration.LazyLoadingEnabled = false;
+            ctx.Configuration.LazyLoadingEnabled = false; // Crear objetos DTO
             return estates;
         }
 
