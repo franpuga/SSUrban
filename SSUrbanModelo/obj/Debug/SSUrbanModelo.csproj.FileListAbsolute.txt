@@ -5,3 +5,4 @@ C:\projects\SSUrban\SSUrbanModelo\bin\Debug\EntityFramework.dll
 C:\projects\SSUrban\SSUrbanModelo\bin\Debug\EntityFramework.xml
 C:\projects\SSUrban\SSUrbanModelo\obj\Debug\SSUrbanModelo.dll
 C:\projects\SSUrban\SSUrbanModelo\obj\Debug\SSUrbanModelo.pdb
+C:\projects\SSUrban\SSUrbanModelo\obj\Debug\SSUrbanModelo.csprojResolveAssemblyReference.cache

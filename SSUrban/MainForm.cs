@@ -17,6 +17,7 @@ using System.Net.NetworkInformation;
 using System.Configuration;
 using System.Diagnostics;
 using SSUrbanModelo;
+using SSUrban.Helpers;
 
 namespace SSUrban
 {
@@ -95,6 +96,7 @@ namespace SSUrban
         {
             try
             {
+                WebRequestHelper.CallPostMethod();
                 _ctx = new SSUrbanEntities();
                 var cust = _ctx.Clientes.OrderBy(x => x.Nombre).ToList();
                 clientsView.Items.Clear();

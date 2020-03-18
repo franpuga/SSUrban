@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using SSUrbanModelo;
+using SSUrbanService.DataContract;
 
 namespace SSUrbanService.Controllers
 {
@@ -26,8 +27,9 @@ namespace SSUrbanService.Controllers
         }
 
         // POST api/values
-        public void Post([FromBody]string value)
+        public void Post(TabAccessDTO inmueble)
         {
+            var x = 4;
         }
 
         // PUT api/values/5
